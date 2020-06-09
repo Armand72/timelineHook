@@ -6,13 +6,23 @@ import { motion } from "framer-motion";
 
 const Timeline = () => {
   const [leftTimeline, setLeft] = useState([
-    { id: uuidv4(), text: "text essaie gauche", card: true },
+    {
+      id: uuidv4(),
+      text:
+        "Vous pouvez modifier ce texte ou bien supprimer cette carte. Vous pouvez la glisser pour la déposer une des deux colonnes.",
+      card: true,
+    },
     { id: uuidv4(), text: "", card: false },
     { id: uuidv4(), text: "", card: false },
     { id: uuidv4(), text: "", card: false },
   ]);
   const [rightTimeline, setRight] = useState([
-    { id: uuidv4(), text: "texte essaie droite", card: true },
+    {
+      id: uuidv4(),
+      text:
+        "Vous pouvez ajouter un nouvel emplacement ou bien bien cliquer sur creation mode pour voir le résultat.",
+      card: true,
+    },
     { id: uuidv4(), text: "", card: false },
     { id: uuidv4(), text: "", card: false },
     { id: uuidv4(), text: "", card: false },
@@ -179,7 +189,12 @@ const Timeline = () => {
 
     return (
       <div
-        onClick={hidden ? Add : ""}
+        onClick={
+          (hidden && middleColumn.length !== leftTimeline.length) ||
+          middleColumn.length !== rightTimeline.length
+            ? Add
+            : ""
+        }
         className={
           (hidden && middleColumn.length !== leftTimeline.length) ||
           middleColumn.length !== rightTimeline.length
