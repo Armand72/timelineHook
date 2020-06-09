@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap");
+
+body {
+  background-color: #f89494;
+  font-family: "Reem Kufi", sans-serif;
+}
+
+.container-timeline {
+  display: flex;
+  justify-content: center;
+}
+
+.container-timeline--col {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: auto;
+}
+
+.container-timeline--left {
+  border-right: solid 10px #1f4c73;
+  box-shadow: 10px 0 5px -2px #00000071;
+}
+
+.container-timeline--right {
+  border-left: solid 4px #1f4c73;
+}
+
+.container-item {
+  height: 200px;
+  width: 400px;
+}
+
+.container-item__text--left {
+  position: relative;
+  margin: auto;
+  height: 100px;
+  width: 300px;
+  padding: 0.5rem;
+  background: #91d9d2;
+  color: #333333;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.container-item__text--left::before {
+  content: " ";
+  background-color: #91d9d2;
+  box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  right: -7.5px;
+  top: calc(50% - 7.5px);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 15px;
+  height: 15px;
+}
+
+.empty-container {
+  background-color: transparent;
+  height: 100px;
+  width: 300px;
+  margin: auto;
+  border: 5px dashed #1f4c73;
+  cursor: pointer;
+
+  &__icon {
+    width: 20%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+
+    & > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.invisibleContainer {
+  height: 100px;
+  width: 300px;
+  margin: auto;
+}
+
+.container-item__text--right {
+  position: relative;
+  margin: auto;
+  height: 100px;
+  width: 300px;
+  padding: 0.5rem;
+  background: #91d9d2;
+  color: #333333;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.container-item__text--right::before {
+  content: " ";
+  background-color: #91d9d2;
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: -7.5px;
+  top: calc(50% - 7.5px);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 15px;
+  height: 15px;
+}
+
+.container-item--right {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.container-item--left {
+  display: flex;
+  align-items: center;
+}
+
+.arrow-right {
+  content: " ";
+  background-color: #fff;
+  box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  right: -7.5px;
+  top: calc(50% - 7.5px);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 15px;
+  height: 15px;
+}
+
+.iconDelete {
+  position: absolute;
+  width: 4%;
+  margin-left: auto;
+  right: 5%;
+
+  & > img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.textareaCard {
+  background-color: #91d9d2;
+  resize: none;
+  border: none;
+  width: 90%;
+  height: 100%;
+
+  &:focus {
+    outline: none !important;
+  }
+}
+
+.addCard {
+  position: fixed;
+  top: 0%;
+  right: 2%;
+  background-color: #1f4c73;
+  color: white;
+  width: 150px;
+  text-align: center;
+  border-radius: 0% 0% 5px 5px;
+  cursor: pointer;
+  border-left: 2px solid #333333;
+  border-right: 2px solid #333333;
+  border-bottom: 2px solid #333333;
+
+  &--disabled {
+    background-color: grey;
+  }
+}
+
+.iconHand {
+  width: 15px;
+  height: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.removeCard {
+  background-color: #1f4c73;
+  height: 100px;
+  width: 300px;
+  position: fixed;
+  border-radius: 5px 0px 0px 5px;
+  right: 0%;
+  top: 40%;
+  border-left: 5px solid #333333;
+  display: flex;
+
+  & > p {
+    color: white;
+    margin: auto;
+    font-size: 1.5rem;
+    padding: 5px;
+  }
+}
+
+.deleteCardIcon {
+  width: 15%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+
+  & > img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.creationMode {
+  position: fixed;
+  top: 0%;
+  left: 2%;
+  background-color: #1f4c73;
+  color: white;
+  width: 170px;
+  text-align: center;
+  border-radius: 0% 0% 5px 5px;
+  cursor: pointer;
+  border-left: 2px solid #333333;
+  border-right: 2px solid #333333;
+  border-bottom: 2px solid #333333;
+
+  &--disabled {
+    background-color: grey;
+  }
+}
+
+.AddTimeCard {
+  position: fixed;
+  top: 0%;
+  left: 44%;
+  z-index: 1002;
+  background-color: #1f4c73;
+  color: white;
+  width: 170px;
+  text-align: center;
+  border-radius: 0% 0% 5px 5px;
+  cursor: pointer;
+  border-left: 2px solid #333333;
+  border-right: 2px solid #333333;
+  border-bottom: 2px solid #333333;
+
+  &--disabled {
+    background-color: grey;
+  }
+}
+
+.middleColumn {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 100px;
+  text-align: center;
+  height: auto;
+  z-index: 1000;
+
+  & > div {
+    height: 200px;
+  }
+
+  & > div > textarea {
+    background-color: white;
+    margin-top: 90%;
+    resize: none;
+    border: none;
+    width: 60px;
+    height: 8%;
+    text-align: center;
+    border-radius: 5px;
+    z-index: 1001;
+
+    &:focus {
+      outline: none !important;
+    }
+  }
+}
